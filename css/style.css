@@ -294,6 +294,10 @@ header {
   font-family: Oswald;
   color: var(--white);
 }
+.menu-thin {
+  visibility: hidden;
+  position: absolute;
+}
 .menu {
   margin-top: 15px;
 }
@@ -393,6 +397,11 @@ header {
   animation-name: arrowbounce;
   animation-duration: 1s;
 }
+/********************menu-thin*********************/
+.menu-item-m img {
+  width: 100%;
+}
+
 /********************modal************************/
 #menu-single-item {
   position: fixed;
@@ -436,6 +445,9 @@ header {
   max-width: 800px;
   padding: 0;
   margin: 0;
+}
+.modal-text {
+  max-width: 100%;
 }
 .modal-text h1, .modal-text h3, .modal-text p {
   margin: 20px;
@@ -482,6 +494,12 @@ footer a {
   }
 }
 @media(max-width: 900px) {
+  #menu-cta {
+    visibility: hidden;
+  }
+  #menu-page-nav {
+    visibility: hidden;
+  }
   .address ul li {
     width: 200px;
     font-size: .85em;
@@ -501,6 +519,28 @@ footer a {
   }
   .shown {
     visibility: hidden;
+  }
+}
+@media(max-width: 800px) {
+  .modal-content {
+    max-width: 100%;
+  }
+  .modal-content img {
+    max-width: 100%;
+  }
+  #food-nav {
+    display: none;
+    position: absolute;
+    height: 0;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    height: 0;
+  }
+  .menu-thin {
+    visibility: visible;
+    position: relative;
   }
 }
 @media(max-width: 600px) {
@@ -526,10 +566,6 @@ footer a {
   }
   #pop-out-address, #pop-out-phone-number {
     flex-direction: column;
-  }
-  .menu {
-    width: 100%;
-    margin: auto;
   }
 }
 @keyframes arrowbounce {

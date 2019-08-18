@@ -71,6 +71,7 @@
   <!--MENU-->
   <main>
 <?php include_once 'html/menu-wide.php'; ?>
+<?php include_once 'html/menu-thin.php'; ?>
   </main>
   <div class="modal" id="menu-single-item">
     <div class="modal-wrap">
