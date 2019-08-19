@@ -257,10 +257,29 @@ header {
 .menu-page nav {
   z-index: 10;
 }
+.reserve-responsive {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px;
+  width: 100%;
+  color: var(--white);
+  background-color: var(--brown);
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border: 1px solid var(--gold);
+}
+.reserve-responsive a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+}
 #food-nav {
   margin: auto;
   display: flex;
   justify-content: center;
+  padding: auto 20px;
+  align-items: center;
 }
 #food-nav ul {
   margin: 0;
@@ -397,11 +416,6 @@ header {
   animation-name: arrowbounce;
   animation-duration: 1s;
 }
-/********************menu-thin*********************/
-.menu-item-m img {
-  width: 100%;
-}
-
 /********************modal************************/
 #menu-single-item {
   position: fixed;
@@ -459,7 +473,6 @@ header {
 }
 /****************footer*******************/
 footer {
-  position: absolute;
   width: 100%;
   top: 100%;
   left: 0;
@@ -468,18 +481,27 @@ footer {
   margin-top: 40px;
   padding-bottom: 20px;
 }
-footer h5 {
+footer h5 {/*
   position: absolute;
-  left: 150px;
+  left: 150px;*/
+  float: left;
+  margin: none;
+  margin-left: 15px;
 }
-footer ul {
+footer ul {/*
   position: absolute;
   right: 150px;
-  padding-bottom: 30px;
+  padding-bottom: 30px;*/
+  float: right;
+  margin: none;
+  margin-right: 15px;
 }
 footer li {
   display: inline-block;
   margin-left: 15px;
+}
+footer li:first-child {
+  margin-left: 0;
 }
 footer a {
   font-size: 40px;
@@ -520,18 +542,67 @@ footer a {
   .shown {
     visibility: hidden;
   }
+  .menu-item-m img {
+    width: 100%;
+    height: auto;
+  }
+  .menu-item-m {
+    margin-bottom: 10px;
+  }
+}
+@media(min-width: 801px) {
+  .reserve-responsive,
+  .menu-thin, .menu-thin *,.menu-item-m *,
+  .menu-description-m, .menu-description-m p,
+  .menu-description-abbr-m, .menu-description-text-m,
+  .show-more a, .show-less a {
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    visibility: hidden !important;
+  }
 }
 @media(max-width: 800px) {
+  .menu-thin * {
+    height: auto;
+    margin: auto;
+    padding: auto;
+  }
+  .menu-item-m {
+    margin-bottom: 20px;
+  }
+  .menu-title-price-m {
+    padding: 10px;
+    font-size: 1.4em;
+  }
+  .menu-price-m {
+    color: var(--gold);
+    margin-left: 5px;
+  }
+  .show-more a, .show-less a {
+    text-transform: uppercase;
+  }
+  .menu-description-m {
+    padding: 0 15px;
+  }
+  .menu-description-abbr-m {
+    height: auto;
+  }
+  .menu-description-text-m {
+    visibility: hidden;
+    height: 0;
+    top: 0;
+    left: 0;
+  }
   .modal-content {
     max-width: 100%;
   }
   .modal-content img {
     max-width: 100%;
-  }
-  #food-nav {
-    display: none;
-    position: absolute;
-    height: 0;
   }
   .menu {
     display: none;
@@ -567,9 +638,4 @@ footer a {
   #pop-out-address, #pop-out-phone-number {
     flex-direction: column;
   }
-}
-@keyframes arrowbounce {
-  0% {transform: translateY(0);}
-  30% {transform: translateY(10px);}
-  100% {transform: translateY(0);}
 }

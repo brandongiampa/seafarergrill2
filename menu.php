@@ -42,6 +42,7 @@
   <link rel="stylesheet" href="css/animate.css">
 </head>
 <body class="menu-page">
+  <div id="top-m"></div>
   <header class="animated fadeIn opaque" id="top">
     <div id="menu-logo"><a href="index.php"><img src="img/logo7.png" alt=""></a></div>
     <div id="menu-cta" class="animated fadeInRight"><a href="http://www.opentable.com">RESERVE A TABLE</a></div>
@@ -52,7 +53,9 @@
       </ul>
     </nav>
   </header>
-
+  <div class="reserve-responsive">
+    <a href="http://www.opentable.com">reserve a table</a>
+  </div>
   <!--FOOD NAV-->
   <nav class="opaque animated fadeInUp" id="food-nav">
     <ul>

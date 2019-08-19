@@ -2,7 +2,14 @@ $(document).ready(function() {
   $('.smooth a[href^="#"]').on('click', function(e) {
     e.preventDefault();
 
-    var target = this.hash;
+    var target;
+    if (window.innerWidth > 900){
+      target = this.hash;
+    }
+    else {
+      target = this.hash +'-m';
+    }
+
     var $target = $(target);
 
     //scroll and show hash
