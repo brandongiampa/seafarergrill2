@@ -6,7 +6,7 @@
 
   while ($row = $stmt->fetch(PDO::FETCH_OBJ)){
     ?>
-    <div class="location-hours" data-value="<?php echo $row->time_zone;?>">
+    <div class="location-hours-m" data-value="<?php echo $row->time_zone;?>">
       <h4><?php echo $row->location;?></h4>
 
         <table>

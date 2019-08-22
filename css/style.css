@@ -416,6 +416,124 @@ header {
   animation-name: arrowbounce;
   animation-duration: 1s;
 }
+/********************mobile************************/
+.body-mobile {
+
+}
+.body-mobile header {
+    background-image: url('../img/restaurant5.jpg');
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0 12px 0;
+    margin: 0;
+    border-bottom: 1px solid var(--white);
+  }
+.body-mobile #menu-logo {
+  z-index: 5;
+}
+.main-nav-m {
+  position: relative;
+  background-color: var(--black);
+  height: 64px;
+  overflow: visible;
+}
+.main-nav-m a i {
+  font-size: 48px;
+  line-height: 48px;
+  float: right;
+  margin: 8px 12px;
+}
+.main-nav-m .close-menu {
+  float: right;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 15px 5px;
+  color: var(--white);
+  visibility: hidden;
+}
+.x-out {
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+.main-nav-m nav {
+  position: relative;
+  background-color: var(--black);
+  top: 100%;
+  right: 100%;
+  z-index: 5;
+}
+.bg-m {
+  position: absolute;
+  background-color: var(--black-trans);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.body-mobile ul {
+  padding: 0;
+  margin: 0;
+}
+.body-mobile li {
+  margin: 0;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--white);
+  border-top: 1px solid var(--white);
+  font-size: 1.9em;
+}
+.body-mobile a {
+  text-decoration: none;
+}
+.info-link-m {
+  background-color: var(--gold);
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+}
+.body-mobile i {
+  font-size: 4.7em;
+}
+.pop-out-m {
+  background-color: var(--white);
+  text-align: center;
+  height: 0;
+  visibility: collapse;
+}
+.pop-out-m * {
+  margin: auto;
+}
+.mobile-nav a {
+  text-decoration: none;
+  font-size: 1.5em;
+}
+#reserve-table-m {
+  background-color: var(--black);
+}
+#view-menu-m {
+  background-color: var(--brown);
+}
+.mobile-nav .hours, .mobile-nav .address, .mobile-nav .phone-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+li .info-li-m {
+  background-color: var(--gold);
+}
+.mobile-nav table {
+  margin: auto;
+}
+.mobile-nav i {
+  text-align: center;
+}
 /********************modal************************/
 #menu-single-item {
   position: fixed;
