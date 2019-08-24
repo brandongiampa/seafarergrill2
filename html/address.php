@@ -8,7 +8,7 @@
 
   while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
     ?>
-    <div class="address-m">
+    <div class="address">
       <ul>
         <li>
           <h4><?php echo $row->location;?></h4>
