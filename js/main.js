@@ -131,13 +131,6 @@ $( document ).ready(function(){
     textFull.style.height = 'auto';
     textFull.style.position = 'static';
     textFull.children.style
-/*
-    this.parentElement.parentElement.style.height = '0';
-    this.parentElement.parentElement.style.visibility = 'hidden';
-    this.parentElement.parentElement.nextElementSibling.style.visibility = 'visible';
-    this.parentElement.parentElement.nextElementSibling.style.height = 'auto';
-    console.log(this.parentElement.parentElement);
-    console.log(this.parentElement.parentElement.nextElementSibling);*/
   });
 });
 //mobile food-menu show less
@@ -147,7 +140,7 @@ $( document ).ready(function(){
 
     textAbbr = this.parentElement.parentElement.previousElementSibling;
     textFull = this.parentElement.parentElement;
-    
+
     textFull.style.height = '0';
     textFull.style.visibility = 'hidden';
     textFull.style.position = 'absolute';
@@ -157,4 +150,46 @@ $( document ).ready(function(){
     textAbbr.style.visibility = 'visible';
     textAbbr.style.height = 'auto';
   });
+});
+
+//mobile menu open
+$( document ).ready(function(){
+  $('#open-menu-button').on('click', function(){
+    $(this).fadeOut(50, function(){
+      this.style.visibility = 'hidden';
+      $('#main-nav-m').css("visibility", "visible");
+      $('#main-nav-m').fadeIn(50, function(){
+        $('#close-menu').fadeOut(1);
+        $('#close-menu').css("visibility", "visible");
+        $('#close-menu').fadeIn(50);
+      });
+
+    });
+  });
+});
+
+//mobile menu close
+$( document ).ready(function(){
+  $('#close-menu').on('click', function(){
+    $(this).fadeOut(50, function(){
+      this.style.visibility = 'hidden';
+      $('#main-nav-m').fadeOut(50 , function(){
+        $('#main-nav-m').css("visibility", "hidden");
+        $('#open-menu-button').css("visibility", "visible");
+        $('#open-menu-button').fadeIn(50);
+        $('#main-nav-m').css("visibility", "hidden");
+      });
+
+    });
+
+  });
+});
+
+//expand info on mobile
+$('.info-link-m a').on('click', function(e){
+  e.preventDefault();/*
+  console.log(this.parentElement.nextElementSibling);
+  this.parentElement.nextElementSibling.style.visibility = 'visible';
+  this.parentElement.nextElementSibling.style.height = 'auto';*/
+  $(this).parent().next().toggleClass('pop-out-appear');
 });
