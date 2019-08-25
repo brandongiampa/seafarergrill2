@@ -312,7 +312,10 @@ header {
   background-color: var(--black);
   font-family: Oswald;
   color: var(--white);
+  overflow-x: hidden;
+  width: 100%;
 }
+
 .menu-thin {
   visibility: hidden;
   position: absolute;
@@ -416,6 +419,9 @@ header {
   animation-name: arrowbounce;
   animation-duration: 1s;
 }
+.menu-page footer {
+  padding-left: 20px;
+}
 /********************mobile************************/
 .body-mobile {
 
@@ -437,7 +443,7 @@ header {
   position: relative;
   background-color: var(--black);
   height: 80px;
-  overflow: visible;
+  overflow-y: visible;
 }
 .main-nav-m a i {
   font-size: 48px;
@@ -697,8 +703,6 @@ footer li:first-child {
 footer a {
   font-size: 40px;
 }
-
-
 /********************media************************/
 @media(max-width: 1200px) {
   .menu {

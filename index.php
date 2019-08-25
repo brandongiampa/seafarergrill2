@@ -4,6 +4,11 @@
 
 <html lang="en">
 <head>
+  <script type="text/javascript">
+    if (screen.width <= 500) {
+        document.location = "mobile/index.php";
+    }
+  </script>
   <script src="https://kit.fontawesome.com/5911355aea.js"></script>
   <script type="text/javascript">
     var isIndex = true;
