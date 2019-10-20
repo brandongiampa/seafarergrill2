@@ -59,7 +59,7 @@ $( document ).ready(function(){
     foodPrice = this.parentElement.nextElementSibling.textContent;
     foodText = this.parentElement.nextElementSibling.nextElementSibling.getAttribute("value");
     $(".modal-text").html(
-      foodPic +
+      '<img src="img/medium/' + foodPic.substring(32) +
       '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
       '<p>' + foodText + '</p>'
     );
@@ -77,7 +77,7 @@ $( document ).ready(function(){
     foodPrice = this.parentElement.previousElementSibling.textContent;
     foodText = this.parentElement.getAttribute("value");
     $(".modal-text").html(
-      foodPic +
+      '<img src="img/medium/' + foodPic.substring(32) +
       '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
       '<p>' + foodText + '</p>'
     );
@@ -95,7 +95,7 @@ $( document ).ready(function(){
     foodPrice = this.parentElement.nextElementSibling.nextElementSibling.textContent;
     foodText = this.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.getAttribute("value");
     $(".modal-text").html(
-      foodPic +
+      '<img src="img/medium/' + foodPic.substring(19) +
       '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
       '<p>' + foodText + '</p>'
     );
