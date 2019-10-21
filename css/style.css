@@ -123,6 +123,10 @@ a {
   border-left: 1px solid var(--light-white);
   z-index: 0;
   overflow-x: hidden;
+  min-width: 150px;
+}
+.location-hours table {
+  margin: auto;
 }
 .location-hours:last-child {
   border-right: 1px solid var(--light-white);
@@ -193,7 +197,7 @@ a {
 }
 /*********************menu*************************/
 header {
-  background: url('../img/opaque2.jpg');
+  background: url('../img/opaque4.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -726,6 +730,7 @@ footer a {
   }
   .location-hours {
     font-size: .85em;
+    min-width: 0;
   }
   .menu {
     width: 90%;
