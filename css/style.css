@@ -19,6 +19,7 @@ html, body {
   position: relative;
   font-family: Oswald;
   letter-spacing: 1px;
+  background-color: purple;
 }
 body {
   overflow-x: hidden;
@@ -294,8 +295,6 @@ header {
   padding: 0;
   margin: 0;
   display: inline-block;
-  list-style-image: url('../img/wheel.png');
-  list-style: url('../img/wheel.png');
 }
 #food-nav a {
   background-color: var(--light-white);
@@ -363,8 +362,9 @@ header {
   align-items: center;
 }
 .menu-category img {
-  height: 90px;
-  width: auto;
+  /*height: 90px;*/
+  width: 150px;
+  /*width: auto;*/
   box-shadow: 0 0 2px rgba(255, 255, 255, .2);
 }
 .menu-category td {
@@ -680,12 +680,11 @@ header {
 /****************footer*******************/
 footer {
   width: 100%;
-  top: 100%;
-  left: 0;
   position: relative;
   border-top: 1px solid var(--white);
   margin-top: 40px;
   padding-bottom: 20px;
+  background-color: red;
 }
 footer h5 {
   float: left;
@@ -696,10 +695,14 @@ footer ul {
   float: right;
   margin: none;
   margin-right: 15px;
+  background: green;
 }
 footer li {
   display: inline-block;
   margin-left: 15px;
+}
+footer li:first-child {
+  margin-left: 0;
 }
 footer li:first-child {
   margin-left: 0;
@@ -837,5 +840,39 @@ footer a {
   }
   #pop-out-address, #pop-out-phone-number {
     flex-direction: column;
+  }
+  footer {
+    padding: 0;
+    margin-top: 80px;
+    margin-left: 0;
+  }
+  footer h5 {
+    margin-left: 0;
+    display: block;
+    text-align: center;
+    float: none;
+    background: pink;
+  }
+  footer nav {
+    margin-left: 0;
+  }
+  footer ul {
+    display: block;
+    margin-left: 0;
+    float: none;
+    text-align: center;
+
+  }
+  footer li {
+    background: brown;
+  }
+}
+@media(min-width: 1920px){
+  #landing-page img {
+    height: 2190px;
+    width: 3870px;
+    left: -15px;
+    top: -15px;
+    z-index: -10;
   }
 }
