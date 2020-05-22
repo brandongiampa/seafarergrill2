@@ -1,3 +1,11 @@
+//async pic load
+$(document).ready(loadFoodPics);
+
+$(document).ready(()=>{
+  $(document).on('scroll', loadFoodPics);
+  $(document).on('resize', loadFoodPics);
+});
+
 //setting up screen behavior between home and menu
 $(document).ready(function(){
 
@@ -99,9 +107,10 @@ $( document ).ready(function(){
       '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
       '<p>' + foodText + '</p>'
     );
+    $("#top").fadeTo(200, .2);
     $(".opaque").fadeTo(200, .2, function(){
       $("#menu-single-item").slideDown();
-    })
+    });
   });
 });
 //set bg images
@@ -193,3 +202,19 @@ $('.info-link-m a').on('click', function(e){
   this.parentElement.nextElementSibling.style.height = 'auto';*/
   $(this).parent().next().toggleClass('pop-out-appear');
 });
+
+function loadFoodPics() {
+  var images = document.querySelectorAll('.menu-pic a img');
+  let viewportTop = window.pageYOffset;
+  let viewportBottom = window.pageYOffset + window.innerHeight;
+  console.log(viewportTop);
+  console.log(viewportBottom);
+  for (let i = 0; i < images.length; i++) {
+    let imgTop = images[i].getBoundingClientRect().top;
+    let imgBottom = imgTop + images[i].getBoundingClientRect().height;
+
+    if (imgBottom > viewportTop || imgTop < viewportBottom) {
+      images[i].src = "img/small/" + images[i].dataset.pic + ".jpg";
+    }
+  }
+}
