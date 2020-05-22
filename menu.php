@@ -1,4 +1,4 @@
-<?php include_once 'php/database.php';
+<?php include_once 'php/db.php';
       //include_once 'api/objects/menu/item.php';
 
   //array of food types and pictures

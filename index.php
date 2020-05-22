@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php include_once 'php/database.php'; ?>
+<?php include_once 'php/db.php'; ?>
 
 <html lang="en">
 <head>
