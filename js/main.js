@@ -207,8 +207,6 @@ function loadFoodPics() {
   var images = document.querySelectorAll('.menu-pic a img');
   let viewportTop = window.pageYOffset;
   let viewportBottom = window.pageYOffset + window.innerHeight;
-  console.log(viewportTop);
-  console.log(viewportBottom);
   for (let i = 0; i < images.length; i++) {
     let imgTop = images[i].getBoundingClientRect().top;
     let imgBottom = imgTop + images[i].getBoundingClientRect().height;
