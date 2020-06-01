@@ -16,7 +16,6 @@ html, body {
   position: relative;
   font-family: Oswald;
   letter-spacing: 1px;
-  overflow-x: hidden;
 }
 body {
   overflow-x: hidden;
@@ -338,6 +337,7 @@ header {
 }
 .menu-category {
   position: relative;
+  overflow:hidden;
 }
 .menu-bg {
   position: absolute;
@@ -717,9 +717,13 @@ footer a {
 @media(max-width: 900px) {
   #menu-cta {
     visibility: hidden;
+    position:absolute;
+    z-index:-5;
   }
   #menu-page-nav {
     visibility: hidden;
+    position:absolute;
+    z-index:-5;
   }
   .address ul li {
     width: 200px;
@@ -812,6 +816,7 @@ footer a {
   .menu-thin {
     visibility: visible;
     position: relative;
+    overflow:hidden;
   }
 }
 @media(max-width: 600px) {
