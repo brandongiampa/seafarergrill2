@@ -26,7 +26,7 @@
 
 <div class="index-page">
   <div id="logo" class="animated fadeInDown">
-    <img src="img/logo7.png" alt="">
+    <img src="img/logo8.png" alt="">
     <a href="http://www.opentable.com">MAKE A RESERVATION</a>
     <a href="menu.php">OUR MENU</a>
   </div>

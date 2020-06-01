@@ -44,7 +44,7 @@
 <body class="menu-page">
   <div id="top-m"></div>
   <header class="opaque" id="top">
-    <div id="menu-logo" class="animated fadeIn"><a href="index.php"><img src="img/logo7.png" alt=""></a></div>
+    <div id="menu-logo" class="animated fadeIn"><a href="index.php"><img src="img/logo8.png" alt=""></a></div>
     <div id="menu-cta" class="animated fadeInRight"><a href="http://www.opentable.com">RESERVE A TABLE</a></div>
     <nav id="menu-page-nav" class="animated fadeInLeft">
       <ul>
