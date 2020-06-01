@@ -63,14 +63,14 @@ $( document ).ready(function(){
   $(".menu-title a").on("click", function(e){
     e.preventDefault();
     foodName = this.textContent;
-    foodPic = this.parentElement.previousElementSibling.innerHTML;
+    foodPic = this.parentElement.previousElementSibling.firstChild.firstChild.dataset.pic;
     foodPrice = this.parentElement.nextElementSibling.textContent;
     foodText = this.parentElement.nextElementSibling.nextElementSibling.getAttribute("value");
     $(".modal-text").html(
-      '<img src="img/medium/' + foodPic.substring(32) +
+      '<img src="img/medium/' + foodPic + '-min.jpg">' +
       '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
       '<p>' + foodText + '</p>'
-    );
+    );console.log(foodPic)
     $(".opaque").fadeTo(200, .2, function(){
       $("#menu-single-item").slideDown();
     })
@@ -81,11 +81,11 @@ $( document ).ready(function(){
   $(".menu-text a").on("click", function(e){
     e.preventDefault();
     foodName = this.parentElement.previousElementSibling.previousElementSibling.textContent;
-    foodPic = this.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+    foodPic = this.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.firstChild.firstChild.dataset.pic;
     foodPrice = this.parentElement.previousElementSibling.textContent;
     foodText = this.parentElement.getAttribute("value");
     $(".modal-text").html(
-      '<img src="img/medium/' + foodPic.substring(32) +
+      '<img src="img/medium/' + foodPic + '-min.jpg">' +
       '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
       '<p>' + foodText + '</p>'
     );
@@ -99,11 +99,11 @@ $( document ).ready(function(){
   $(".menu-pic a").on("click", function(e){
     e.preventDefault();
     foodName = this.parentElement.nextElementSibling.textContent;
-    foodPic = this.innerHTML;
+    foodPic = this.firstChild.dataset.pic; console.log(foodPic)
     foodPrice = this.parentElement.nextElementSibling.nextElementSibling.textContent;
     foodText = this.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.getAttribute("value");
     $(".modal-text").html(
-      '<img src="img/medium/' + foodPic.substring(19) +
+      '<img src="img/medium/' + foodPic + '-min.jpg">' +
       '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
       '<p>' + foodText + '</p>'
     );
