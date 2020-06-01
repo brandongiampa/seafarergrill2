@@ -16,11 +16,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="img/wheel.png">
   <title>Seafarer Grille</title>
   <link href="https://fonts.googleapis.com/css?family=Oswald|Yellowtail&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/animate.min.css">
 </head>
 <body>
 
@@ -45,7 +45,7 @@
 <script   src="https://code.jquery.com/jquery-3.3.1.min.js"
           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
           crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
-<script src="js/bg-slide.js"></script>
+<script src="js/main.min.js"></script>
+<script src="js/bg-slide.min.js"></script>
 
 </html>
