@@ -47,10 +47,6 @@ $( document ).ready(function(){
     contentTop = $(".modal-content").offset().top;
     contentBottom = $(".modal-content").offset().top + $(".modal-content").height();
 
-    console.log("X: " + e.clientX + ", Y: " + e.clientY);
-    console.log("Left: " + contentLeft + ", Right: " + contentRight);
-    console.log("Top: " + contentTop + ", Bottom: " + contentBottom);
-
     if ((e.clientX < contentLeft | e.clientX > contentRight) | (e.clientY < contentTop | e.clientY > contentBottom)) {
       $("#menu-single-item").slideUp(400, function(){
         $(".opaque").fadeTo(200, 1);
@@ -70,7 +66,7 @@ $( document ).ready(function(){
       '<img src="img/medium/' + foodPic + '-min.jpg">' +
       '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
       '<p>' + foodText + '</p>'
-    );console.log(foodPic)
+    );
     $(".opaque").fadeTo(200, .2, function(){
       $("#menu-single-item").slideDown();
     })
@@ -99,7 +95,7 @@ $( document ).ready(function(){
   $(".menu-pic a").on("click", function(e){
     e.preventDefault();
     foodName = this.parentElement.nextElementSibling.textContent;
-    foodPic = this.firstChild.dataset.pic; console.log(foodPic)
+    foodPic = this.firstChild.dataset.pic;
     foodPrice = this.parentElement.nextElementSibling.nextElementSibling.textContent;
     foodText = this.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.getAttribute("value");
     $(".modal-text").html(
@@ -121,9 +117,7 @@ $( document ).ready(function(){
 
 //mobile food menu show-more/less variables
 var textAbbr;
-var textFull;/*
-var showMore;
-var showLess;*/
+var textFull;
 
 //mobile food-menu show more
 $( document ).ready(function(){
@@ -196,10 +190,7 @@ $( document ).ready(function(){
 
 //expand info on mobile
 $('.info-link-m a').on('click', function(e){
-  e.preventDefault();/*
-  console.log(this.parentElement.nextElementSibling);
-  this.parentElement.nextElementSibling.style.visibility = 'visible';
-  this.parentElement.nextElementSibling.style.height = 'auto';*/
+  e.preventDefault();
   $(this).parent().next().toggleClass('pop-out-appear');
 });
 
