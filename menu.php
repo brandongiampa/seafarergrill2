@@ -16,7 +16,7 @@
     $food_type = array(
       "food_type" => $row->food_type,
       "food_link" => strtolower(str_replace(' ', '', $row->food_type)),
-      "bg_pic" => 'img/' . $row->bg_pic . '.jpg',
+      "bg_pic" => 'img/' . $row->bg_pic . '-min.jpg',
       "food_type_id" => $row->food_type_id
     );
 

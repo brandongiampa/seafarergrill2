@@ -24,7 +24,7 @@
           ?>
           <tr>
             <!--pic, title, price, abbr. desc-->
-            <td class="menu-pic"><a href="#"><img src="img/small/<?php echo $row->pic;?>.jpg" alt="" data-pic="<?php echo $row->pic;?>"></a></td>
+            <td class="menu-pic"><a href="#"><img src="img/small/<?php echo $row->pic;?>-min.jpg" alt="" data-pic="<?php echo $row->pic;?>"></a></td>
             <td class="menu-title"><a href="#"><?php echo $row->name;?></a></td>
             <td class="menu-price"><?php echo '$' . $row->price_dollar . ' | €' . $row->price_euro;?></td>
             <td class="menu-text" value="<?php echo $row->description;?>">

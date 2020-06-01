@@ -16,7 +16,7 @@
       while ($row = $stmt->fetch(PDO::FETCH_OBJ)){
         ?>
         <div class="menu-item-m">
-          <img src="img/small/<?php echo $row->pic;?>.jpg" alt="">
+          <img src="img/small/<?php echo $row->pic;?>-min.jpg" alt="">
           <div class="menu-title-price-m">
             <span class="menu-title-m"><?php echo $row->name;?></span>
             <span class="menu-price-m"><?php echo '$'. $row->price_dollar . ' | €' . $row->price_euro;?></span>
