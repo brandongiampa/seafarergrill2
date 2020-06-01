@@ -31,26 +31,18 @@ $( document ).ready(function(){
 
 /*click x on modal and close*/
 $( document ).ready(function(){
-  $("#close-btn").on("click", function(){
-    $("#menu-single-item").slideUp(400, function(){
-      $(".opaque").fadeTo(200, 1);
-    });
-  })
+  $("#close-btn").on("click", closeMenuModal)
 });
 /*click background on modal and close*/
 $( document ).ready(function(){
-
   $("#menu-single-item").on("click", function(e){
-
     contentLeft = $(".modal-content").offset().left;
     contentRight = $(".modal-content").offset().left + $(".modal-content").width();
     contentTop = $(".modal-content").offset().top;
     contentBottom = $(".modal-content").offset().top + $(".modal-content").height();
 
     if ((e.clientX < contentLeft | e.clientX > contentRight) | (e.clientY < contentTop | e.clientY > contentBottom)) {
-      $("#menu-single-item").slideUp(400, function(){
-        $(".opaque").fadeTo(200, 1);
-      })
+      closeMenuModal();
     }
   })
 });
@@ -62,16 +54,10 @@ $( document ).ready(function(){
     foodPic = this.parentElement.previousElementSibling.firstChild.firstChild.dataset.pic;
     foodPrice = this.parentElement.nextElementSibling.textContent;
     foodText = this.parentElement.nextElementSibling.nextElementSibling.getAttribute("value");
-    $(".modal-text").html(
-      '<img src="img/medium/' + foodPic + '-min.jpg">' +
-      '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
-      '<p>' + foodText + '</p>'
-    );
-    $(".opaque").fadeTo(200, .2, function(){
-      $("#menu-single-item").slideDown();
-    })
+    openMenuModal();
   });
 });
+
 /*click More..., send info and slide modal down*/
 $( document ).ready(function(){
   $(".menu-text a").on("click", function(e){
@@ -80,14 +66,7 @@ $( document ).ready(function(){
     foodPic = this.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.firstChild.firstChild.dataset.pic;
     foodPrice = this.parentElement.previousElementSibling.textContent;
     foodText = this.parentElement.getAttribute("value");
-    $(".modal-text").html(
-      '<img src="img/medium/' + foodPic + '-min.jpg">' +
-      '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
-      '<p>' + foodText + '</p>'
-    );
-    $(".opaque").fadeTo(200, .2, function(){
-      $("#menu-single-item").slideDown();
-    })
+    openMenuModal();
   });
 });
 /*click More..., send info and slide modal down*/
@@ -98,15 +77,7 @@ $( document ).ready(function(){
     foodPic = this.firstChild.dataset.pic;
     foodPrice = this.parentElement.nextElementSibling.nextElementSibling.textContent;
     foodText = this.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.getAttribute("value");
-    $(".modal-text").html(
-      '<img src="img/medium/' + foodPic + '-min.jpg">' +
-      '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
-      '<p>' + foodText + '</p>'
-    );
-    $("#top").fadeTo(200, .2);
-    $(".opaque").fadeTo(200, .2, function(){
-      $("#menu-single-item").slideDown();
-    });
+    openMenuModal();
   });
 });
 //set bg images
@@ -166,7 +137,6 @@ $( document ).ready(function(){
         $('#close-menu').css("visibility", "visible");
         $('#close-menu').fadeIn(50);
       });
-
     });
   });
 });
@@ -182,9 +152,7 @@ $( document ).ready(function(){
         $('#open-menu-button').fadeIn(50);
         $('#main-nav-m').css("visibility", "hidden");
       });
-
     });
-
   });
 });
 
@@ -206,4 +174,20 @@ function loadFoodPics() {
       images[i].src = "img/small/" + images[i].dataset.pic + ".jpg";
     }
   }
+}
+function openMenuModal(){
+  $(".modal-text").html(
+    '<img src="img/medium/' + foodPic + '-min.jpg">' +
+    '<h1>' + foodName + '<span class="price">' + foodPrice + '</span></h1>' +
+    '<p>' + foodText + '</p>'
+  );
+  $("#top").fadeTo(200, .2);
+  $(".opaque").fadeTo(200, .2, function(){
+    $("#menu-single-item").slideDown();
+  });
+}
+function closeMenuModal(){
+  $("#menu-single-item").slideUp(400, function(){
+    $(".opaque").fadeTo(200, 1);
+  });
 }
