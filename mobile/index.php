@@ -1,4 +1,4 @@
-<?php include_once '../php/database.php'; ?>
+<?php include_once '../php/db.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
